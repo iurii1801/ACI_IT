@@ -98,7 +98,7 @@
 
    ![image](https://i.imgur.com/1zxl6LO.png)
 
-4. В разделе **Носители (Storage)** к пустому оптическому приводу был подключён ISO-образ Ubuntu 24.04.3 LTS, скачанный ранее.
+4. В разделе **Носители (Storage)** к пустому оптическому приводу был подключён ISO-образ Ubuntu 24.04.03 LTS, скачанный ранее.
 
    ![image](https://i.imgur.com/N87iE96.png)
 
@@ -160,7 +160,7 @@
    cd /media/$USER/VBox_GAs_* 
    sudo ./VBoxLinuxAdditions.run 
    sudo reboot
- ```
+```
 
 ![image](https://i.imgur.com/HnxJTOH.png)
 
