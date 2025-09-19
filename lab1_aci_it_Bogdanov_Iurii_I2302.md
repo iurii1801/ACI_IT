@@ -47,7 +47,7 @@
 На следующем этапе необходимо перейти на официальный сайт дистрибутива Ubuntu:  
 [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop).  
 
-На странице загрузки требуется выбрать версию **Ubuntu Desktop LTS** (например, Ubuntu 24.04.3 LTS или более свежую) и скачать ISO-образ системы.  
+На странице загрузки требуется выбрать версию **Ubuntu Desktop LTS** (например, Ubuntu 24.04.03 LTS или более свежую) и скачать ISO-образ системы.  
 Загруженный файл следует сохранить в удобном месте на локальном диске, чтобы позже использовать его при создании виртуальной машины.
 
 ![image](https://i.imgur.com/0wwi10I.png)
@@ -94,7 +94,7 @@
 
    ![image](https://i.imgur.com/66Dv1nt.png)
 
-3. В разделе **Носители (Storage)** к пустому оптическому приводу был подключён ISO-образ Ubuntu 24.04.03 LTS, скачанный ранее.
+3. В разделе **Носители (Storage)** к пустому оптическому приводу был подключён ISO-образ Ubuntu 24.04.3 LTS, скачанный ранее.
 
    ![image](https://i.imgur.com/N87iE96.png)
 
@@ -151,11 +151,11 @@
 4. В терминале были выполнены команды для установки зависимостей и запуска установочного скрипта:  
 
 ```bash
-   sudo apt update 
-   sudo apt install -y build-essential dkms linux-headers-$(uname -r) 
-   cd /media/$USER/VBox_GAs_* 
-   sudo ./VBoxLinuxAdditions.run 
-   sudo reboot
+sudo apt update 
+sudo apt install -y build-essential dkms linux-headers-$(uname -r) 
+cd /media/$USER/VBox_GAs_* 
+sudo ./VBoxLinuxAdditions.run 
+sudo reboot
 ```
 
 ![image](https://i.imgur.com/HnxJTOH.png)
