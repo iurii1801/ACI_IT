@@ -118,7 +118,7 @@
 
 5. В разделе **Installation type** выбран вариант **Erase disk and install Ubuntu**, который удаляет содержимое только виртуального диска. Изменения были подтверждены.
 
-   ![image](https://i.imgur.com/8TjMLKH.png)
+   ![image](https://i.imgur.com/6EwxYNz.png)
 
 6. На следующем шаге был выбран часовой пояс.
 
