@@ -5,25 +5,24 @@
 PATH_TO_CHECK="${1:-/}"
 THRESHOLD="${2:-80}"
 
-# 1. Проверки
+# 1. Проверка существования пути
 if [[ ! -e "$PATH_TO_CHECK" ]]; then
   echo "Ошибка: путь не найден: $PATH_TO_CHECK"
   exit 2
 fi
-# если порог передали не числом — вернём к 80
-[[ "$THRESHOLD" =~ ^[0-9]+$ ]] || THRESHOLD=80
 
-# 2. Берём процент занятости с df
-# -P даёт стабильный POSIX-формат, 5-й столбец — Used%
-USAGE=$(df -P "$PATH_TO_CHECK" | awk 'NR==2{gsub("%","",$5); print $5}')
+# 2. Получение процента использования через df -h и awk
+USAGE=$(df -h "$PATH_TO_CHECK" | awk 'NR==2 {gsub("%","",$5); print $5}')
 
-# 3. Вывод по формату
+# 3. Текущая дата и время
 NOW=$(date '+%Y-%m-%d %H:%M:%S')
+
+# 4. Вывод информации
 echo "$NOW"
 echo "Путь: $PATH_TO_CHECK"
 echo "Использовано: ${USAGE}%"
 
-# 4. Статус и код возврата
+# 5. Проверка порога и вывод статуса
 if (( USAGE < THRESHOLD )); then
   echo "Статус: OK"
   exit 0
